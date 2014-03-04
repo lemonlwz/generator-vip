@@ -1,0 +1,18 @@
+<% if( _.slugify(projectType) === 'mobile' ){ %>
+$BFS: 2*16; //base font size 26/$BFS+rem
+<% } %>
+@import "compass/css3";
+@import "mods/icons-sprite";
+@import "mods/functions";
+
+@import "mods/reset";
+
+@import "mods/icons";
+<% if( _.slugify(projectType) === 'mobile' ){ %>
+@media (min-width: 768px) {
+  @import "mods/icons2x";
+  html {
+    font-size: 32px;
+  }
+}
+<% } %>

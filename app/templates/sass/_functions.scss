@@ -1,0 +1,27 @@
+<% if( _.slugify(projectType) === 'mobile' ){ %>
+@mixin fnIconSprite($name){
+  width: image-width(sprite-file($icons, $name));
+  height: image-height(sprite-file($icons, $name));
+  background-image: sprite-url($icons2x);
+  background-position: sprite-position($icons, $name);
+  background-repeat: no-repeat;
+  background-size: image-width('icons.png') image-height('icons.png');
+};
+
+@mixin fnIcon2xSprite($name){
+  width: image-width(sprite-file($icons2x, $name));
+  height: image-height(sprite-file($icons2x, $name));
+  background-image: sprite-url($icons2x);
+  background-position: sprite-position($icons2x, $name);
+  background-repeat: no-repeat;
+  background-size: auto;
+};
+
+//use @include fnIconSprite(d-succ); or @include fnIcon2xSprite(d-succ);
+<% } else { %>
+@mixin fnIconSprite($name){
+  width: image-width(sprite-file($icons, $name));
+  height: image-height(sprite-file($icons, $name));
+  background: sprite-url($icons) no-repeat sprite-position($icons, $name);
+};
+<% } %>

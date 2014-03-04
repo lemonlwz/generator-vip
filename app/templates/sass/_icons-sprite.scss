@@ -1,0 +1,21 @@
+<% if( _.slugify(projectType) === 'mobile' ){ %>
+$icons: sprite-map("icons/*.png", $layout: diagonal);
+$icons2x: sprite-map("icons2x/*.png", $layout: diagonal);
+
+.<%= _.slugify(projectName) %> {
+  .icons-sprite {
+    background-image: sprite-url($icons);
+  }
+
+  .icons2x-sprite {
+    background-image: sprite-url($icons2x);
+  }
+}
+<% } else { %>
+$icons: sprite-map("icons/*.png", $layout: small);
+.<%= _.slugify(projectName) %> {
+  .icons-sprite {
+    background-image: sprite-url($icons);
+  }
+}
+<% } %>
