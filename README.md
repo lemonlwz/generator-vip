@@ -24,12 +24,17 @@ Npm link generator-vip to local, **in generator-vip folder** run:
 $ npm link
 ```
 
-Finally, initiate the generator:
+folder name must be `generator-vip`
+
+## Use
+
+### Init options
+go to **new project folder** run:
 
 ```
 $ yo vip
 ```
-### Init options
+
 1. Select project init type  
 > [?] select project init type:  
 >> 1) pc  
@@ -40,9 +45,6 @@ $ yo vip
 
 1. Enter author  
 > [?] enter author: (http://www.vip.com)  
-
-
-## Use
 ### Compass sass
 `grunt sass`
 ### Watch compass sass
